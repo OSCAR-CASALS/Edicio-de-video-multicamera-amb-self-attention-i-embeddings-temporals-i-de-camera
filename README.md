@@ -28,26 +28,27 @@ També es requereix el _dataset_ TVMCE (https://virtualfilmstudio.github.io/proj
 - Un directori per als vídeos del conjunt d'entrenament, i un altre amb el de test, que segueixint la següent estructura:
 
 
-entrenament\
-&emsp;&emsp;|-- video_0002 (nom del vídeo)\
-&emsp;&emsp;|&emsp;&emsp;|-- output (fotograma utilitzat al video final)\
-&emsp;&emsp;|&emsp;&emsp;|&emsp;&emsp;|-- 18362.jpg (Fotograma)\
-&emsp;&emsp;|&emsp;&emsp;|&emsp;&emsp;|-- ...\
-&emsp;&emsp;|&emsp;&emsp;|-- CAM1 (Id de la càmera)\
-&emsp;&emsp;|&emsp;&emsp;|&emsp;&emsp;|-- 18460.jpg\
-&emsp;&emsp;|&emsp;&emsp;|&emsp;&emsp;|-- ...
+```text
+train
+    |-- video_0002 (Nom del vídeo)
+    |   |-- output (Fotogrames utilitzats al video final)
+    |   |   |-- 18362.jpg (Fotograma)
+    |   |   |-- ...
+    |   |-- CAM1 (Id de la càmera)
+    |   |   |-- 18460.jpg
+    |   |   |-- ...
+```
 
-
-
-test\
-&emsp;&emsp;|-- video_0002 (nom del vídeo)\
-&emsp;&emsp;|&emsp;&emsp;|-- output (fotograma utilitzat al video final)\
-&emsp;&emsp;|&emsp;&emsp;|&emsp;&emsp;|-- 18362.jpg (Fotograma)\
-&emsp;&emsp;|&emsp;&emsp;|&emsp;&emsp;|-- ...\
-&emsp;&emsp;|&emsp;&emsp;|-- CAM1 (Id de la càmera)\
-&emsp;&emsp;|&emsp;&emsp;|&emsp;&emsp;|-- 18460.jpg\
-&emsp;&emsp;|&emsp;&emsp;|&emsp;&emsp;|-- ...
-
+```text
+test
+    |-- video_0002 (Nom del vídeo)
+    |   |-- output (Fotogrames utilitzats al vídeo final)
+    |   |   |-- 18362.jpg (Fotograma)
+    |   |   |-- ...
+    |   |-- CAM1 (Id de la càmera)
+    |   |   |-- 18460.jpg
+    |   |   |-- ...
+```
 
 
 Finalment, les id de cada fotograma hauran de reflectir la seva posició temporal en el vídeo.
@@ -115,7 +116,7 @@ The code was developed using the following libraries:
 The **TVMCE** dataset (https://virtualfilmstudio.github.io/projects/multicam/) or another dataset with the same structure is also required. Specifically, the dataset must include:
 
 - A JSON file containing the training samples and another containing the test samples. Each sample must follow the structure below:
-    + _boundary_: Whether a camera switch was made (`1`) or not (`0`).
+    + _boundary_: Whether a camera switch was made (1) or not (0).
     + _videoID_: Identifier of the video the sample belongs to.
     + _CAMFrame_: Identifier of the candidate frame.
     + _outputList_: Previous frames before the candidate frame.
@@ -176,7 +177,7 @@ Specifically, you must define:
 - The image width and height required by the backbone (_image\_width_ and _image\_height_).
 - The model name, which will be used to save:
     - The model's _state\_dict_.
-    - An ONNX version of the model (when running `SwinV2_Multicamera_Model.ipynb`).
+    - An ONNX version of the model (when running SwinV2_Multicamera_Model.ipynb).
 
 ## Repository Structure
 
@@ -184,13 +185,13 @@ The repository contains:
 
 | File | Description |
 |------|-------------|
-| `MobilNet_Multicamera_Model.ipynb` | Notebook used to create and evaluate the model with MobileNetV3 backbone. |
-| `SwinV2_Multicamera_Model.ipynb` | Notebook used to create and evaluate the model with SwinV2 backbone. |
-| `MobilNet_Multicamera_Model.html` | HTML version of `MobilNet_Multicamera_Model.ipynb`. |
-| `SwinV2_Multicamera_Model.html` | HTML version of `SwinV2_Multicamera_Model.ipynb`. |
-| `Edició de vídeo multicàmera amb self-attention i embeddings temporals i de càmera.pdf` | Master's thesis providing additional details about the proposed model. |
-| `Multicamera video editing with self-attention and temporal and camera embeddings (English AI translation).pdf` | AI-generated English translation of the Master's thesis. |
-| `requirements.txt` | pip environment used to run both notebooks. |
+| MobilNet_Multicamera_Model.ipynb | Notebook used to create and evaluate the model with MobileNetV3 backbone. |
+| SwinV2_Multicamera_Model.ipynb | Notebook used to create and evaluate the model with SwinV2 backbone. |
+| MobilNet_Multicamera_Model.html | HTML version of MobilNet_Multicamera_Model.ipynb. |
+| SwinV2_Multicamera_Model.html | HTML version of SwinV2_Multicamera_Model.ipynb. |
+| Edició de vídeo multicàmera amb self-attention i embeddings temporals i de càmera.pdf | Master's thesis providing additional details about the proposed model. |
+| Multicamera video editing with self-attention and temporal and camera embeddings (English AI translation).pdf | AI-generated English translation of the Master's thesis. |
+| requirements.txt | pip environment used to run both notebooks. |
 
 
 
