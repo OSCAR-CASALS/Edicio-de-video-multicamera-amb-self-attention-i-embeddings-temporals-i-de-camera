@@ -53,7 +53,7 @@ test
 
 Finalment, les id de cada fotograma hauran de reflectir la seva posició temporal en el vídeo.
 
-En el repositori s'inclou un entorn _pi_ amb les dependències necessàries per a executar els notebook.
+En el repositori s'inclou un entorn _pip_ amb les dependències necessàries per a executar els notebook.
 
 ``
 pip install -r requirements.txt
@@ -113,7 +113,7 @@ The code was developed using the following libraries:
 | numpy | 2.4.4 | Python library for numerical computing and array manipulation. |
 | seaborn | 0.13.2 | Visualization library built on top of matplotlib that simplifies the creation of advanced plots. |
 
-The **TVMCE** dataset (https://virtualfilmstudio.github.io/projects/multicam/) or another dataset with the same structure is also required. Specifically, the dataset must include:
+The TVMCE dataset (https://virtualfilmstudio.github.io/projects/multicam/) or another dataset with the same structure is also required. Specifically, the dataset must include:
 
 - A JSON file containing the training samples and another containing the test samples. Each sample must follow the structure below:
     + _boundary_: Whether a camera switch was made (1) or not (0).
@@ -150,7 +150,7 @@ test
 
 Finally, the identifier of each frame must reflect its temporal position within the video.
 
-The repository also includes a **pip** environment with all the required dependencies to run the notebooks.
+The repository also includes a _pip_ environment with all the required dependencies to run the notebooks.
 
 ```
 pip install -r requirements.txt
