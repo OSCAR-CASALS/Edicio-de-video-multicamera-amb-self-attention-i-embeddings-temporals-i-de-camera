@@ -89,4 +89,8 @@ El repositori inclou:
 |MobilNet_Multicamera_Model.html| Versió en html del notebook MobilNet_Multicamera_Model.ipynb|
 |SwinV2_Multicamera_Model.html| Versió en html del notebook SwinV2_Multicamera_Model.ipynb|
 |Edició de vídeo multicàmera amb self-attention i embeddings temporals i de càmera.pdf| Treball de fi de Master on es donen més detalls sobre la creació del model.|
+|Multicamera video editing with self-attention and temporal and camera embeddings (English AI translation).pdf| Traducció al anglès feta amb IA del Treball de fi de Master.|
 |requirements.txt| Entorn _pip_ amb el qual s'han executat els dos notebooks.|
+
+
+
